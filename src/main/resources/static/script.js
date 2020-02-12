@@ -78,7 +78,9 @@ sendAnswerBtn.addEventListener('click', (event) => {
 });
 
 function getAnswer() {
-    return document.getElementById('currencyAnswerInput').value;
+    let answer = document.getElementById('currencyAnswerInput').value;
+    answer = answer.replace(/,/g, '.')
+    return answer;
 }
 
 function addReplyToPage(text) {
