@@ -1,7 +1,5 @@
 package com.github.m111q.homework5.model.currency;
 
-import java.util.Random;
-
 public enum CurrencyCode {
     AED("UAE Dirham United Arab Emirates"),
     ARS("Argentine Peso	Argentina"),

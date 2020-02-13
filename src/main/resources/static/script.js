@@ -1,5 +1,6 @@
-const WEATHER_API_URL = 'http://localhost:8080/weather/';
-const CURRENCY_API_URL = 'http://localhost:8080/currency/';
+const MAIN_URL = 'https://frozen-plateau-92166.herokuapp.com/';
+const WEATHER_API_URL = MAIN_URL + 'weather/';
+const CURRENCY_API_URL = MAIN_URL + 'currency/';
 
 //weather api
 
@@ -69,7 +70,6 @@ sendAnswerBtn.addEventListener('click', (event) => {
     event.preventDefault();
     const answer = getAnswer();
     fetch(CURRENCY_API_URL + answer)
-        //.then(processOkResponse)
         .then(response => {
             return response.text()
         })

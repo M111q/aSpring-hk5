@@ -25,7 +25,7 @@ public class CurrencyService {
         this.url = API_URL + randomCurrency;
         this.randomCurrencyRate = getExchangeRateFromGivenCurrency(mainCurrencyCode);
         this.randomCurrencyInfo = getCurrencyInfo(randomCurrency);
-        System.out.println(randomCurrencyInfo + " " + randomCurrencyRate );
+        System.out.println(randomCurrencyInfo + " " + randomCurrencyRate);
     }
 
     public String getRandomCurrencyInfo() {
@@ -53,7 +53,7 @@ public class CurrencyService {
     }
 
     private String getCurrencyInfo(CurrencyCode currencyCode) {
-        return currencyCode + " : " +currencyCode.getInfo();
+        return currencyCode + " : " + currencyCode.getInfo();
     }
 
     private double roundDouble(double doubleValue) {
