@@ -40,7 +40,6 @@ public class CurrencyService {
         return randomCurrencyRate;
     }
 
-    //  @EventListener(ApplicationReadyEvent.class)
     private double getExchangeRateFromGivenCurrency(CurrencyCode currencyCode) {
         double currencyRate = getExchangeRates().get(currencyCode.toString()).doubleValue();
         return roundDouble(currencyRate);

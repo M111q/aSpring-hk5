@@ -23,19 +23,7 @@ public class WeatherApi {
 
     @GetMapping("/{cityName}")
     public ResponseEntity<WeatherInfoDTO> getWeatherByCityName(@PathVariable String cityName) {
-        return new ResponseEntity<WeatherInfoDTO>(weatherService.getWeatherInfoDTO(cityName), HttpStatus.OK);
+        return new ResponseEntity<>(weatherService.getWeatherInfoDTO(cityName), HttpStatus.OK);
     }
-
-    //@EventListener(ApplicationReadyEvent.class)
-
-
-//    private WeatherInfo getCatFact() {
-//        RestTemplate restTemplate = new RestTemplate();
-////        AnimalFact animalFact = restTemplate.getForObject("https://cat-fact.herokuapp.com/facts/random", AnimalFact.class);
-////        JsonNode image = restTemplate.getForObject("https://aws.random.cat/meow", JsonNode.class).get("file");
-////        animalFact.setSrc(image.asText());
-//        return "duuupa";
-//    }
-
 
 }
